@@ -1,4 +1,4 @@
-courses
+Presentations
 =======
 
-Demos and various files related to courses that I've taught.
+Demos and various files related to presentations that I've given.
