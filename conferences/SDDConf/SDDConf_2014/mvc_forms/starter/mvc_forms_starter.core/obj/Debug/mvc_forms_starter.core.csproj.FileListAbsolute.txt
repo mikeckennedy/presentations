@@ -1,0 +1,7 @@
+D:\Programming\Github\presentations\conferences\SDDConf\SDDConf_2014\mvc_forms\starter\mvc_forms_starter.core\bin\Debug\mvc_forms_starter.core.dll
+D:\Programming\Github\presentations\conferences\SDDConf\SDDConf_2014\mvc_forms\starter\mvc_forms_starter.core\bin\Debug\mvc_forms_starter.core.pdb
+D:\Programming\Github\presentations\conferences\SDDConf\SDDConf_2014\mvc_forms\starter\mvc_forms_starter.core\obj\Debug\mvc_forms_starter.core.csprojResolveAssemblyReference.cache
+D:\Programming\Github\presentations\conferences\SDDConf\SDDConf_2014\mvc_forms\starter\mvc_forms_starter.core\obj\Debug\mvc_forms_starter.core.dll
+D:\Programming\Github\presentations\conferences\SDDConf\SDDConf_2014\mvc_forms\starter\mvc_forms_starter.core\obj\Debug\mvc_forms_starter.core.pdb
+D:\Programming\Github\presentations\conferences\SDDConf\SDDConf_2014\mvc_forms\starter\mvc_forms_starter.core\bin\Debug\Newtonsoft.Json.dll
+D:\Programming\Github\presentations\conferences\SDDConf\SDDConf_2014\mvc_forms\starter\mvc_forms_starter.core\bin\Debug\Newtonsoft.Json.xml
