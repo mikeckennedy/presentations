@@ -17,24 +17,27 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("The Book Store", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li><a href='/'>Home</a></li>
+                    <li><a href='/admin'>Admin</a></li>
                 </ul>
-                @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+		<footer>
+			<p>
+				&copy; @DateTime.Now.Year -
+			    <a href="https://twitter.com/mkennedy" target="_blank">Michael Kennedy</a> -
+			    <a href="https://twitter.com/mkennedy" target="_blank">@@mkennedy</a> -
+				<a href="http://blog.michaelckennedy.net/" target="_blank">blog.michaelckennedy.net</a>
+</p>
+		</footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

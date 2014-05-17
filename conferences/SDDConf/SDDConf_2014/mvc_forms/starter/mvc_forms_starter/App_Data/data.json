@@ -1,0 +1,20 @@
+﻿{
+  "Books": [],
+  "Categories": [
+    {
+      "Id": 1,
+      "Name": "Science",
+      "ImageUrl": "https://i.chzbgr.com/maxW500/7568480768/hC5E9BACA/"
+    },
+    {
+      "Id": 2,
+      "Name": "Math",
+      "ImageUrl": "http://twistedphysics.typepad.com/cocktail_party_physics/images/2008/05/08/pythagoracatbox.jpg"
+    },
+    {
+      "Id": 3,
+      "Name": "Startups",
+      "ImageUrl": "http://scientopia.org/img-archive/scicurious/img_874.jpg"
+    }
+  ]
+}

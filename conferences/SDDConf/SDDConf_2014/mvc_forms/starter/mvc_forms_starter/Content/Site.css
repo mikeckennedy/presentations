@@ -1,6 +1,8 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background: rgb(185, 3, 3);
+    color: white;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -14,4 +16,30 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+
+.navbar-inverse {
+    background-color: rgb(142, 1, 1);
+    border-color: rgb(185, 3, 3);
+    color: white;
+}
+
+.jumbotron {
+    background-color: rgb(142, 1, 1);
+    margin-top: 10px;
+}
+
+.navbar-inverse .navbar-brand, 
+.navbar-inverse .navbar-nav>li>a,
+a {
+    color: white;
+}
+
+a:hover {
+    color:#ccc;
+}
+
+.navbar-brand { text-transform: uppercase;
+    font-size: 32px;
 }
