@@ -40,12 +40,15 @@ namespace mvc_forms_starter.core
 		public void AddCategory(Category category)
 		{
 			this.Categories.Add(category);
+			category.Id = this.Categories.Max(c => c.Id) + 1;
 			this.Save();
 		}
 
-		public void AddBook(Book book)
+		public void AddBook(Book book, int categoryId)
 		{
 			this.Books.Add(book);
+			book.Id = this.Books.Max(b => b.Id) + 1;
+			book.CategoryId = categoryId;
 			this.Save();
 		}
 	}
