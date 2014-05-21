@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "improving_mvc_projects", "improving_mvc_projects\improving_mvc_projects.csproj", "{44F25452-E0C5-4D9A-AB68-AD6B43AFC7FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44F25452-E0C5-4D9A-AB68-AD6B43AFC7FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44F25452-E0C5-4D9A-AB68-AD6B43AFC7FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44F25452-E0C5-4D9A-AB68-AD6B43AFC7FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44F25452-E0C5-4D9A-AB68-AD6B43AFC7FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,16 @@
+﻿@model string[]
+@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+
+<p>Use this area to provide additional information.</p>
+
+<p>Silly titles:</p>
+
+<div>
+    @foreach (var t in Model)
+    {
+        <div>@t</div>
+    }
+</div>
