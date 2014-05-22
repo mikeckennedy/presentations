@@ -1,0 +1,40 @@
+﻿@using mvc_forms_starter.core.Models
+@model mvc_forms_starter.ViewModels.CreateBookViewModel
+@{
+    ViewBag.Title = "AddBook";
+   }
+
+<h2>Add Book</h2>
+
+
+@using (Html.BeginForm())
+{
+   @Html.ValidationSummary()
+	<div>
+		Name:
+		@Html.TextBoxFor(m => m.Book.Name, new { @class = "form-control" })
+	</div>
+	<br />
+	<div>
+		Image Url:
+		@Html.TextBoxFor(m => m.Book.ImageUrl, new { @class = "form-control", placeholder = "http://someurl.com/somepic.png" })
+	</div>
+	<br />
+	<div>
+		Price:
+		@Html.TextBoxFor(m => m.Book.Price, new { @class = "form-control", placeholder = "0.00" })
+	</div>
+	<br />
+	<div>
+	    Category:
+		@Html.DropDownListFor(m => m.Book.CategoryId, Model.CategoryList, "-- pick at category --", new { @class = "form-control"})
+		@*@Html.TextBoxFor(m => m.CategoryId, new
+		{
+		    @class = "form-control", placeholder="find the id, and put it here."
+		})*@
+	</div>
+	<br />
+	<button class="btn btn-primary">Add book</button>
+}
+}
+

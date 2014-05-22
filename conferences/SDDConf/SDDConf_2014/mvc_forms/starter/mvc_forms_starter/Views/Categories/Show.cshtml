@@ -1,0 +1,19 @@
+﻿@model mvc_forms_starter.core.Models.Book[]
+@{
+    ViewBag.Title = "Show";
+}
+
+<h2>Books in category ????</h2>
+
+<div class="categories">
+	@foreach (var b in Model)
+	{
+		<div class="category">
+			<a href="/categories/book/@b.Id">
+				<img src="@b.ImageUrl" alt="" />
+				<div class="title">@b.Name</div>
+			</a>
+		</div>
+	}
+
+</div>

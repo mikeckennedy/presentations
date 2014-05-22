@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THE BOOK STORE - @ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
+    	@Styles.Render("~/Content/css")
+		<link href="~/Scripts/mdd_styles.css" rel="stylesheet" />
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
@@ -41,7 +42,29 @@
     </div>
 
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryval")
+	@Scripts.Render("~/bundles/bootstrap")
+	<script src="~/Scripts/MarkdownDeepLib.min.js"></script>
     @RenderSection("scripts", required: false)
+	
+    <script>
+		
+
+		$(document).ready(function() {
+			$("textarea.mdd_editor").MarkdownDeep({
+				help_location: "/Content/mdd_help.html",
+				disableTabHandling: true
+			});
+
+		    //$("form").submit(function(e) {
+		    //	e.preventDefault();
+
+		    //	// submit via JS
+		    //    alert("Hold on");
+
+		    //    return false;
+		    //});
+		});
+    </script>
 </body>
 </html>

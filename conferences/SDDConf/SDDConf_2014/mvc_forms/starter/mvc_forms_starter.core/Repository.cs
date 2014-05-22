@@ -20,7 +20,7 @@ namespace mvc_forms_starter.core
 			Categories = new List<Category>();
 		}
 
-		private void Save()
+		public void Save()
 		{
 			string file = HttpContext.Current.Server.MapPath("~/App_Data/data.json");
 			string json_data = JsonConvert.SerializeObject(this,Formatting.Indented);
@@ -51,5 +51,6 @@ namespace mvc_forms_starter.core
 			book.CategoryId = categoryId;
 			this.Save();
 		}
+
 	}
 }

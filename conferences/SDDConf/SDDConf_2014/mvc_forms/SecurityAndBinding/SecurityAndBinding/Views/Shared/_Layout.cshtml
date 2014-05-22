@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width" />
+		<title>LearningLine Exercise: Broken Views</title>
+		<style>
+			a, a:visited { color: blue; }
+			.input-validation-error { background-color: rgb(253, 147, 147);}
+		</style>
+	
+	</head>
+	<body style="margin: 0px; background-color: #A5A5A7">
+		<div style="background-color: #4D4D4F; padding: 10px; text-align: center">
+			<img src="~/Images/learninglinelogowhite32.png" />
+		</div>
+		<div style="background-color: white; width: 900px; margin: auto; padding: 20px; line-height: 2em; font-size: 18px; box-shadow: 5px 5px 3px 1px rgba(0, 0, 0, .3);">
+	
+			@RenderBody()
+        
+		</div>
+	</body>
+	@Scripts.Render("~/bundles/jquery")
+    <script src="~/Scripts/jquery-migrate-1.2.1.min.js"></script>
+	@Scripts.Render("~/bundles/jqueryval")
+</html>

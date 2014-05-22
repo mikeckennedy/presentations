@@ -1,0 +1,27 @@
+﻿@model mvc_forms_starter.core.Models.Category
+@{
+    ViewBag.Title = "Add Category";
+}
+
+<h2>Add Category</h2>
+
+@using (Html.BeginForm())
+{
+	@Html.ValidationSummary()
+    <div>
+        Name:
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+    </div>
+	<br/>
+    <div>
+        Image Url:
+        @Html.TextBoxFor(m => m.ImageUrl, new {@class = "form-control", placeholder="http://someurl.com/somepic.png"})
+    </div>
+	<br />
+    <button class="btn btn-primary">Add category</button>
+}
+
+@*<form action="/sldfjsjf" method="POST" ...>
+    
+</form>*@
+

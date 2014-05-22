@@ -1,0 +1,49 @@
+﻿@using SecurityAndBinding.Models
+@model IEnumerable<SecurityAndBinding.Models.WebUser>
+
+@{
+    ViewBag.Title = "Index";
+	WebUser currentUser = ViewBag.CurrentUser;
+}
+
+<div style="float: right;">
+	Current user: @currentUser.Name<br/>
+	<a href="/home/edit">edit your account info</a>
+</div>
+<h2>All Users</h2>
+
+<table>
+	<tr>
+		<th>
+			@Html.DisplayNameFor(model => model.Name)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Email)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.IsAdmin)
+		</th>
+		<th></th>
+	</tr>
+
+	@foreach (var item in Model) {
+		<tr>
+			<td>
+				@Html.DisplayFor(modelItem => item.Name)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Email)
+			</td>
+			<td>
+				@Html.CheckBox("IsAdmin", item.IsAdmin ?? false, new {disabled="disabled"})
+			</td>
+			@if (currentUser.IsAdmin == true)
+			{
+				<td>
+					<a href="/home/editother/@item.Id">edit</a>
+				</td>
+			}
+		</tr>
+	}
+
+</table>

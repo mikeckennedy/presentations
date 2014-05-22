@@ -43,3 +43,32 @@ a:hover {
 .navbar-brand { text-transform: uppercase;
     font-size: 32px;
 }
+
+
+
+.categories {
+    text-align: center;
+}
+
+.categories .category {
+    display: inline-block;
+}
+
+.category img {
+    height: 150px;
+}
+.category .title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+input[type=text].input-validation-error,
+select.input-validation-error
+ {
+    background: pink;
+}
+
+textarea {
+    max-width: 100%;
+}

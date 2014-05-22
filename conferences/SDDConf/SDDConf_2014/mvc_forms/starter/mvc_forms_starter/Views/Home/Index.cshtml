@@ -1,4 +1,5 @@
-﻿@model IEnumerable<mvc_forms_starter.core.Models.Category>
+﻿@using System
+@model IEnumerable<mvc_forms_starter.core.Models.Category>
 @{
     ViewBag.Title = "Home";
 }
@@ -12,6 +13,16 @@
 
 <div class="row">
 		
-        CATEGORIES HERE
+    <div class="categories">
+        @foreach (var c in Model)
+        {
+            <div class="category">
+                <a href="/categories/show/@c.Id">
+					<img src="@c.ImageUrl" alt="" />
+					<div class="title">@c.Name</div>
+                </a>
+            </div>
+        }
+    </div>
 
 </div>

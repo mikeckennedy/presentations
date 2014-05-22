@@ -1,6 +1,45 @@
 ﻿{
   "Books": [
-    
+    {
+      "Id": 1,
+      "Name": "Quantum Cats",
+      "ImageUrl": "http://sunaj-home.org/photos/galleries/lol_cats/funny-pictures-science-cat-does-experiments-on-you-for-revenge.jpg",
+      "Price": 3.22,
+      "CategoryId": 1,
+      "Comments": [
+        {
+          "Username": null,
+          "CommentText": "I love this book.",
+          "Votes": []
+        },
+        {
+          "Username": null,
+          "CommentText": "I love *books* and **cats**:\r\n\r\n    class {\r\n        public void...\r\n    }\r\n    \r\n    \r\n ![Image Text](https://i.chzbgr.com/maxW500/7568480768/hC5E9BACA/)",
+          "Votes": []
+        },
+        {
+          "Username": null,
+          "CommentText": "<script>Haxor!!!</script>",
+          "Votes": []
+        }
+      ]
+    },
+    {
+      "Id": 2,
+      "Name": "Mathy Cats",
+      "ImageUrl": "http://2.bp.blogspot.com/_tu3-zijM7dw/SOQEqenKW8I/AAAAAAAAXjA/4EWZVaP0V1Q/s400/funny-pictures-cat-kittens-fractal-schrodinger-back.jpg",
+      "Price": 1.0,
+      "CategoryId": 2,
+      "Comments": []
+    },
+    {
+      "Id": 3,
+      "Name": "Math Cat II",
+      "ImageUrl": "https://i.chzbgr.com/maxW500/7568480768/hC5E9BACA/",
+      "Price": 2.0,
+      "CategoryId": 2,
+      "Comments": []
+    }
   ],
   "Categories": [
     {
@@ -17,6 +56,26 @@
       "Id": 3,
       "Name": "Startups",
       "ImageUrl": "http://scientopia.org/img-archive/scicurious/img_874.jpg"
+    },
+    {
+      "Id": 4,
+      "Name": "Cycling",
+      "ImageUrl": "http://www.lolcats.com/images/u/07/23/lolcatsdotcomqxw9hbytlkc4rhkc.jpg"
+    },
+    {
+      "Id": 5,
+      "Name": "Dougnuts",
+      "ImageUrl": "http://onehungrymama.com/wp-content/uploads/2009/08/LOLcat-Already-licked-iz-mine-now.jpg"
+    },
+    {
+      "Id": 6,
+      "Name": "Boo",
+      "ImageUrl": null
+    },
+    {
+      "Id": 7,
+      "Name": "Boo2",
+      "ImageUrl": null
     }
   ]
 }

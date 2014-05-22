@@ -1,0 +1,75 @@
+﻿@model mvc_forms_starter.core.Models.Book
+
+@{
+    ViewBag.Title = "Book";
+}
+
+<h2>Book</h2>
+
+<div>
+    <h4>Book</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageUrl)
+        </dt>
+
+        <dd>
+            <img src="@Model.ImageUrl"/>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoryId)
+        </dd>
+
+    </dl>
+</div>
+
+<hr/>
+<div>
+    <h3>Comments</h3>
+	@foreach (var c in Model.Comments)
+	{
+	    var md = new MarkdownDeep.Markdown();
+	    md.SafeMode = true;
+	    <div>Comment: @Html.Raw(md.Transform(c.CommentText))</div>
+	}
+	
+    <h3> Add comment</h3>
+    <div>
+        @using (Html.BeginForm("AddComment", "Categories"))
+        {
+			@Html.HiddenFor(m => m.Id)
+            <div class="mdd_toolbar"></div>
+			@Html.TextArea("text", new {cls=50, rows=10, @class="mdd_editor"})
+			<div class="mdd_resizer"></div>
+			<div class="mdd_preview"></div>
+			<button>Add comment</button>
+		}
+    </div>
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
