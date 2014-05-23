@@ -99,7 +99,7 @@ namespace CarApp
 
             Car c = new Car();
             c.Name = "Roadster";
-            c.Maker = "Tesla";
+           // c.Maker = "Tesla";
             c.Engine = new Engine() {Type="Electric", HP=350};
             c.ServiceRecords.Add(new ServiceRecord() {Desc="Oil change", Price=7.99});
 
@@ -108,13 +108,13 @@ namespace CarApp
             
             c = new Car();
             c.Name = "Esprie";
-            c.Maker = "Lotus";
+           // c.Maker = "Lotus";
             c.Engine = new Engine() {Type="Gas", HP=300};
             mongo.Save(c);
             
             c = new Car();
             c.Name = "Station Wagon";
-            c.Maker = "Chevy";
+           // c.Maker = "Chevy";
             c.Engine = new Engine() {Type="Gas", HP=100};
             mongo.Save(c);
         }
