@@ -215,15 +215,15 @@ namespace BookStoreTest
 		private static void AddIndexes()
 		{
 			var mongo = new BookStoreContext();
-			mongo.Books.EnsureIndex(new IndexKeysBuilder<Book>().Ascending(b => b.Author));
-			mongo.Books.EnsureIndex("Ratings.Value");
-			mongo.Books.EnsureIndex("Ratings.UserId", "Ratings.Value");
-			mongo.Books.EnsureIndex("Publisher");
-			mongo.Books.EnsureIndex("Published");
-			mongo.Users.EnsureIndex("Age");
-			mongo.Users.EnsureIndex(new IndexKeysBuilder<User>().Ascending(u => u.UserId));
-			mongo.Users.EnsureIndex("Location.City");
-			mongo.Publishers.EnsureIndex(new IndexKeysBuilder<Publisher>().Ascending(p => p.Name));
+			mongo.Books.CreateIndex(new IndexKeysBuilder<Book>().Ascending(b => b.Author));
+			mongo.Books.CreateIndex("Ratings.Value");
+			mongo.Books.CreateIndex("Ratings.UserId", "Ratings.Value");
+			mongo.Books.CreateIndex("Publisher");
+			mongo.Books.CreateIndex("Published");
+			mongo.Users.CreateIndex("Age");
+			mongo.Users.CreateIndex(new IndexKeysBuilder<User>().Ascending(u => u.UserId));
+			mongo.Users.CreateIndex("Location.City");
+			mongo.Publishers.CreateIndex(new IndexKeysBuilder<Publisher>().Ascending(p => p.Name));
 		}	
 
 		private static void QueryData()
