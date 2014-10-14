@@ -1,33 +1,51 @@
-import datetime
 import mongoengine
-from mongoengine import StringField, BooleanField, ListField, DateTimeField, FloatField, ReferenceField, EmbeddedDocumentField
+from mongoengine import StringField, ListField, EmbeddedDocumentField, IntField, ReferenceField
+
+
+class Address(mongoengine.EmbeddedDocument):
+    street = StringField(required=True)
+    city = StringField(required=True)
+    state = StringField(required=True)
+    country = StringField(required=True)
+    postal_code = StringField(required=True)
 
 
 class Customer(mongoengine.Document):
-    pass
+    first_name = StringField(required=True)
+    last_name = StringField(required=True)
+    address = EmbeddedDocumentField('Address')
 
-
-class Flight(mongoengine.Document):
-    title = StringField(required=True)
-    isbn = StringField(required=True)
-    author_name = StringField(required=True, default=datetime.datetime.now)
-    popular_today = BooleanField(required=True, default=False)
-    reviews = ListField(EmbeddedDocumentField('BookReview'))
-    published = DateTimeField()
-    author = ReferenceField('Author')
-
-    meta = dict(collection='Book',
-                index_background=True,
-                indexes=[{'fields': ['title'], 'name': 'jays_index'}])
+    meta = dict(collection='Customer')
 
 
 class Airline(mongoengine.Document):
-    pass
+    name = StringField(required=True)
+
+    meta = dict(collection='Airline')
+
+
+class Flight(mongoengine.Document):
+    number = StringField(required=True)
+    start_city = StringField(required=True)
+    end_city = StringField(required=True)
+    connections = ListField(EmbeddedDocumentField('Connection'))
+    passengers = ListField(ReferenceField(Customer))
+    delay_in_minutes = IntField(required=True, default=0)
+    airline = ReferenceField(Airline, reverse_delete_rule=mongoengine.CASCADE)
+
+    meta = dict(collection='Flight')  # ,
+    # index_background=True,
+    # indexes=['fields': ['title'], 'name': 'jays_index'}])
 
 
 class Trip(mongoengine.Document):
-    pass
+    flights = ListField(StringField)
+
+    meta = dict(collection='Trip')
 
 
 class Connection(mongoengine.EmbeddedDocument):
-    pass
+    flight_number = StringField()
+
+    meta = dict(collection='Connection')
+

@@ -108,3 +108,7 @@ Backup*/
 UpgradeLog*.XML
 
 conferences/SDDConf/SDDConf_2014/python_for_csharp_devs/.idea/workspace.xml
+
+*.pyc
+
+*.pyc
