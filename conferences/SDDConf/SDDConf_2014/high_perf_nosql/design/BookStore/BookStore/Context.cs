@@ -10,22 +10,13 @@ namespace BookStore
 	class MongoContext : MongoDB.Kennedy.MongoDbDataContext
 	{
 		public MongoContext() :
-			base("PerfDb")
+			base("PerfDb_BookStore_SA2014")
 		{
 		}
 
 		public IQueryable<Book> Books
 		{
 			get { return base.GetCollection<Book>(); }
-		}
-
-		public IQueryable<Book2> Books2
-		{
-			get { return base.GetCollection<Book2>(); }
-		}
-		public IQueryable<Review2> Reviews
-		{
-			get { return base.GetCollection<Review2>(); }
 		}
 
 		public MongoCollection<Book> BooksColl
