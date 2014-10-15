@@ -1,3 +1,4 @@
+
 class Address:
     pass
 
@@ -14,7 +15,7 @@ class Flight:
     pass
 
     # index_background=True,
-    # indexes=['fields': ['title'], 'name': 'jays_index'}])
+    # indexes=['fields': ['title'], 'name': 'find_by_title'}])
 
 
 class Trip:

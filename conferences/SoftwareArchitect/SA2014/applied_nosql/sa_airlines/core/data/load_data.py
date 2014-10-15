@@ -91,25 +91,25 @@ def load_airlines():
 
     airlines = []
 
-    a = Airline()
-    a.name = "United"
-    airlines.append(a)
-
-    a = Airline()
-    a.name = "Southwest"
-    airlines.append(a)
-
-    a = Airline()
-    a.name = "Delta"
-    airlines.append(a)
-
-    a = Airline()
-    a.name = "Virgin"
-    airlines.append(a)
-
-    a = Airline()
-    a.name = "Air France"
-    airlines.append(a)
+    # a = Airline()
+    # a.name = "United"
+    # airlines.append(a)
+    #
+    # a = Airline()
+    # a.name = "Southwest"
+    # airlines.append(a)
+    #
+    # a = Airline()
+    # a.name = "Delta"
+    # airlines.append(a)
+    #
+    # a = Airline()
+    # a.name = "Virgin"
+    # airlines.append(a)
+    #
+    # a = Airline()
+    # a.name = "Air France"
+    # airlines.append(a)
 
     # TODO: Save flights to DB
 
