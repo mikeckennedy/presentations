@@ -1,19 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
+using MongoDB.Kennedy;
 
 namespace books
 {
-	public class MongoContext : MongoDB.Kennedy.MongoDbDataContext
+	public class MongoContext : MongoDbDataContext
 	{
 		public MongoContext() :
 			base("SA_Perf_Design")
 		{
 		}
 
-		public IQueryable<Book> Books { get { return base.GetCollection<Book>(); } }
+		public IQueryable<Book> Books
+		{
+			get { return base.GetCollection<Book>(); }
+		}
 	}
-
 }
