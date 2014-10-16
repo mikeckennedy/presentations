@@ -51,16 +51,26 @@ namespace books
 			//mongo.Save(b);
 
 
+			//var mongo = new MongoContext();
+			//var b = mongo.Books2
+			//	.Single(b2 => b2.Name == "Harry Potter");
+
+			//var reviews = mongo.Reviews
+			//	.Where(r => b.ReviewIds.Contains(r.Id));
+
+			//Console.WriteLine(b.ToBsonDocument());
+			//Console.WriteLine(reviews.First().ToBsonDocument());
+
+
 			var mongo = new MongoContext();
-			var b = mongo.Books2
-				.Single(b2 => b2.Name == "Harry Potter");
 
-			var reviews = mongo.Reviews
-				.Where(r => b.ReviewIds.Contains(r.Id));
+			var a = mongo.Books.ToArray();
+			Console.WriteLine(a.Length);
 
-			Console.WriteLine(b.ToBsonDocument());
-			Console.WriteLine(reviews.First().ToBsonDocument());
-
+			foreach (var book in a)
+			{
+				mongo.Save(book);
+			}
 
 		}
 	}
