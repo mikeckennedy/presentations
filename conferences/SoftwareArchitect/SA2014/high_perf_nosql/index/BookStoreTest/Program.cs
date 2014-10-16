@@ -242,8 +242,8 @@ namespace BookStoreTest
 			var gg = books.Count(b => b.Published >= new DateTime(2003, 1, 1));
 			var hh = books.Where(b => b.Author == "John Grisham").Select(b => b.Title).ToArray();
 			var ii = books.Where(b => b.Author == "John Grisham" && b.Published >= new DateTime(2003, 1, 1)).Select(b => b.Title).ToArray();
-			var xx = books.Where(b => b.Ratings.Any(r => r.Value >= 0)).Count();
-			var yy = books.Where(b => b.Ratings.Any(r => r.Value >= 5)).Count();
+			var xx = books.Count(b => b.Ratings.Any(r => r.Value >= 0));
+			var yy = books.Count(b => b.Ratings.Any(r => r.Value >= 5));
 			var jj = books.Count(b => b.Ratings.Any(r => r.Value >= 0));
 			var kk = books.Count(b => b.Ratings.Any(r => r.Value >= 5));
 			var userId = new ObjectId("529f92eda6e10b55bc81293a");
